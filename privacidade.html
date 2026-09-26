@@ -1,1 +1,50 @@
-O acesso ao Drive é usado para armazenar e gerenciar esses backups, que o token fica na máquina de backup
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Política de privacidade do Backup Netuno, ferramenta privada de cópias de segurança com Google Drive.">
+  <title>Política de privacidade | Backup Netuno</title>
+  <style>
+    :root { color-scheme: light; }
+    body { margin: 0; background: #f7f9fc; color: #172232; font: 17px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; }
+    main { box-sizing: border-box; max-width: 780px; margin: 36px auto; padding: 36px; background: #fff; border: 1px solid #e3e8f0; border-radius: 12px; }
+    h1, h2 { line-height: 1.25; }
+    h1 { margin: 20px 0 8px; font-size: 2rem; }
+    h2 { margin-top: 30px; font-size: 1.2rem; }
+    a { color: #1752a4; }
+    .data { margin-top: 0; color: #5a6573; }
+    @media (max-width: 650px) { main { margin: 0; padding: 24px 20px; border: 0; border-radius: 0; } }
+  </style>
+</head>
+<body>
+  <main>
+    <nav><a href="./index.html">Página inicial</a></nav>
+    <h1>Política de privacidade do Backup Netuno</h1>
+    <p class="data">Última atualização: 26 de setembro de 2026.</p>
+
+    <p>O Backup Netuno é uma configuração de uso privado que utiliza o Firebird gbak e o rclone para gerar cópias de segurança de um banco de dados e enviá-las para o Google Drive da conta autorizada. Esta página descreve como a configuração usa os dados necessários a essa finalidade.</p>
+
+    <h2>Dados utilizados</h2>
+    <p>Os arquivos de backup podem conter os dados pessoais e comerciais presentes no banco de dados de origem. A rotina também registra localmente informações de execução, como nomes de arquivos, datas, tamanhos, resultados e mensagens de erro. Esses dados não são exibidos neste site.</p>
+
+    <h2>Acesso ao Google Drive</h2>
+    <p>Após a autorização pelo titular da Conta Google, o rclone usa o escopo <code>drive.file</code> para criar, localizar, verificar e gerenciar as pastas e cópias de segurança que ele próprio cria no Google Drive. A configuração não se destina a examinar os demais arquivos existentes na conta.</p>
+
+    <h2>Finalidade, armazenamento e compartilhamento</h2>
+    <p>Os dados acessados pela API do Google são usados exclusivamente para enviar, verificar, manter e excluir versões das cópias de segurança. Os arquivos e registros locais permanecem nos computadores que executam a rotina; as cópias enviadas ficam no Google Drive da conta autorizada. O Backup Netuno não possui um servidor próprio para receber esses dados e não os utiliza para publicidade ou venda. O Google Drive é o serviço de armazenamento utilizado; o tratamento feito pelo Google segue a <a href="https://policies.google.com/privacy?hl=pt-BR">política de privacidade do Google</a>.</p>
+
+    <h2>Credenciais e proteção</h2>
+    <p>A autorização OAuth e os dados necessários para renová-la são guardados no arquivo de configuração local do rclone. O acesso a esse arquivo, aos backups locais e à conta do Google Drive deve ser limitado às pessoas autorizadas pelo responsável pela rotina.</p>
+
+    <h2>Prazo de conservação e exclusão</h2>
+    <p>A quantidade de versões conservadas localmente e no Google Drive é definida no script de backup. A rotina remove versões antigas após confirmar o envio das versões mais recentes; falhas podem manter cópias adicionais até uma execução bem-sucedida. O responsável também pode excluir as cópias manualmente.</p>
+
+    <h2>Revogação do acesso</h2>
+    <p>O titular da Conta Google pode revogar a permissão concedida ao Backup Netuno nas configurações de segurança da própria conta. A revogação impede novos acessos pelo rclone, mas não exclui automaticamente os arquivos de backup já armazenados: eles devem ser removidos separadamente, se desejado.</p>
+
+    <h2>Contato</h2>
+    <p>Para dúvidas ou solicitações relacionadas a esta configuração e aos dados tratados por ela, escreva para <a href="mailto:SEU_EMAIL_DE_CONTATO">SEU_EMAIL_DE_CONTATO</a>.</p>
+  </main>
+</body>
+</html>
